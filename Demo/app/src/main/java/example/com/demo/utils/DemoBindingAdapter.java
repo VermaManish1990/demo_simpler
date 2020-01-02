@@ -1,5 +1,6 @@
 package example.com.demo.utils;
 
+import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,7 +12,7 @@ import com.squareup.picasso.Picasso;
 public class DemoBindingAdapter {
 
     @BindingAdapter(
-            value = {"bind:imageUrl", "bind:placeholder"}, requireAll = false)
+            value = {"imageUrl", "placeholder"}, requireAll = false)
     public static void loadImage(
             ImageView imageView,
             String url,
@@ -37,8 +38,9 @@ public class DemoBindingAdapter {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     @BindingAdapter(
-            value = {"bind:duration"}, requireAll = false)
+            value = {"duration"}, requireAll = false)
     public static void duration(TextView view,
                                 long milliSecond) {
         if (milliSecond <= 0) {

@@ -11,15 +11,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import javax.inject.Inject;
+
+import dagger.android.support.DaggerFragment;
 import example.com.demo.R;
 import example.com.demo.databinding.FragmentDetailBinding;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DetailFragment extends Fragment {
+public class DetailFragment extends DaggerFragment {
     HomeViewModel homeViewModel;
 
+    @Inject
     public DetailFragment() {
         // Required empty public constructor
     }

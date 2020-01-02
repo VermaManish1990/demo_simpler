@@ -1,6 +1,7 @@
 package example.com.demo.model;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import example.com.demo.model.AlbumDataModel.Images;
 import example.com.demo.utils.StringUtil;
@@ -57,7 +58,7 @@ public class UserInfoModel {
 
     public String getInitial() {
         if (!StringUtil.isNullOrEmpty(getDisplay_name())) {
-            return Character.toString(getDisplay_name().charAt(0)).toUpperCase();
+            return Character.toString(getDisplay_name().charAt(0)).toUpperCase(Locale.getDefault());
         }
         return "";
     }

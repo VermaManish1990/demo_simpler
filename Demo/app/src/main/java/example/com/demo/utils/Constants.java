@@ -6,9 +6,11 @@ public class Constants {
     public static final String CLIENT_SECRET = "843b91d0b9294ca28191cc474196aa8e";
 
 
+    public static final String BASE_URL = "https://api.spotify.com";
+
     public static final String REDIRECT_URL = "https://spotify.com/oauth2/callback";
-    public static final String SAVED_ALBUM_URL = "https://api.spotify.com/v1/me/albums";
-    public static final String USER_INFO_URL = "https://api.spotify.com/v1/me/";
+    public static final String SAVED_ALBUM_URL = "/v1/me/albums/";
+    public static final String USER_INFO_URL = "/v1/me/";
 
 
     public static final int LOGIN_REQUEST_CODE = 1;

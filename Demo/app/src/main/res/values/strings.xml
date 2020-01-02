@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Demo</string>
+    <string name="album_icon">album Icon</string>
+    <string name="trackimage">TrackImage</string>
+    <string name="user_image">User Image</string>
+    <string name="artist">Artist - %1$s</string>
+    <string name="unknown">Unknown</string>
+    <string name="tracks">tracks : %1$s</string>
+    <string name="release_date">Release Date - %1$s</string>
+    <string name="spotify_me">Spotify Me!!</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

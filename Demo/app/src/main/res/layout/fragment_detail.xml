@@ -19,6 +19,7 @@
             android:layout_height="150dp"
             android:layout_alignParentTop="true"
             android:scaleType="fitXY"
+            android:contentDescription="@string/trackimage"
             bind:imageUrl="@{trackInfo.images.get(0).url}"
             bind:placeholder="@{@drawable/ic_launcher_background}" />
 
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/track_name"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:text="@{trackInfo.artists.get(0).name}"
             android:textSize="14sp" />
@@ -51,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/artist_name"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:textSize="14sp"
             bind:duration="@{trackInfo.duration_ms}" />

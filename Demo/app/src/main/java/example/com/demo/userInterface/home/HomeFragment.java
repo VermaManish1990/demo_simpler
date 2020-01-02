@@ -15,6 +15,9 @@ import android.widget.AdapterView;
 
 import java.util.ArrayList;
 
+import javax.inject.Inject;
+
+import dagger.android.support.DaggerFragment;
 import example.com.demo.R;
 import example.com.demo.adapters.DrawerItemCustomAdapter;
 import example.com.demo.adapters.TrackListAdapter;
@@ -25,9 +28,10 @@ import example.com.demo.utils.Constants;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment implements TrackListAdapter.OnItemClicklistener {
+public class HomeFragment extends DaggerFragment implements TrackListAdapter.OnItemClicklistener {
     HomeViewModel homeViewModel;
 
+    @Inject
     public HomeFragment() {
         // Required empty public constructor
     }

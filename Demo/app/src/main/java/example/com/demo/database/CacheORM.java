@@ -58,7 +58,7 @@ public class CacheORM {
                     json = cursor.getString(cursor.getColumnIndex(COLUMN_BODY));
 
                 }
-
+                cursor.close();
                 database.close();
             }
 

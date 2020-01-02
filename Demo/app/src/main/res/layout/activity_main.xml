@@ -21,7 +21,7 @@
             android:background="@color/colorPrimary"
             android:onClick="@{()-> loginViewModel.onLoginClicked()}"
             android:padding="7dp"
-            android:text="Spotify Me!!"
+            android:text="@string/spotify_me"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

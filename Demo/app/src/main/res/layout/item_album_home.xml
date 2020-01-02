@@ -8,14 +8,15 @@
         android:id="@+id/album_icon"
         android:layout_width="90dp"
         android:layout_height="90dp"
+        android:contentDescription="@string/album_icon"
         android:scaleType="fitXY" />
 
     <TextView
         android:id="@+id/album_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/album_icon"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/album_icon"
         android:textColor="#000000"
         android:textSize="15sp"
         android:textStyle="bold" />
@@ -25,9 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/album_name"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="3dp"
-        android:layout_toRightOf="@+id/album_icon"
+        android:layout_toEndOf="@+id/album_icon"
         android:textSize="13sp" />
 
     <TextView
@@ -35,9 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/artist_name"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="3dp"
-        android:layout_toRightOf="@+id/album_icon"
+        android:layout_toEndOf="@+id/album_icon"
         android:textSize="13sp" />
 
     <TextView
@@ -45,9 +46,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/release_date"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="3dp"
-        android:layout_toRightOf="@+id/album_icon"
+        android:layout_toEndOf="@+id/album_icon"
         android:textSize="13sp" />
 
     <View

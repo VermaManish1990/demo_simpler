@@ -1,21 +1,22 @@
 package example.com.demo;
 
-import android.app.Application;
+import dagger.android.AndroidInjector;
+import dagger.android.DaggerApplication;
+import example.com.demo.di.ApplicationComponent;
+import example.com.demo.di.DaggerApplicationComponent;
 
-import example.com.demo.Network.RequestManager;
-
-public class MyApplication extends Application {
-
-    private static MyApplication sInstance;
+public class MyApplication extends DaggerApplication {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        RequestManager.initializeWith(this, null);
-        sInstance = this;
     }
 
-    public static synchronized MyApplication getInstance() {
-        return sInstance;
+    @Override
+    protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
+        ApplicationComponent component = DaggerApplicationComponent.builder().application(this).build();
+        component.inject(this);
+        return component;
     }
+
 }

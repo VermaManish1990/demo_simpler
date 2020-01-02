@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import example.com.demo.R;
 import example.com.demo.model.AlbumDataModel;
@@ -84,18 +85,18 @@ public class DrawerItemCustomAdapter extends RecyclerView.Adapter<RecyclerView.V
             final HomeViewHolder homeViewHolder = (HomeViewHolder) holder;
             homeViewHolder.mAlbumName.setText(item.album.name);
             if (item.album.artists != null && item.album.artists.size() > 0) {
-                homeViewHolder.mArtistName.setText("Artist - " + item.album.artists.get(0).name);
+                homeViewHolder.mArtistName.setText(mContext.getResources().getString(R.string.artist, item.album.artists.get(0).name));
             } else {
-                homeViewHolder.mArtistName.setText("Artist - Unknown");
+                homeViewHolder.mArtistName.setText(mContext.getResources().getString(R.string.artist, mContext.getResources().getString(R.string.unknown)));
             }
 
             if (item.album.tracks != null && item.album.tracks.items != null) {
-                homeViewHolder.mTracksCount.setText("tracks : " + item.album.tracks.items.size());
+                homeViewHolder.mTracksCount.setText(mContext.getResources().getString(R.string.tracks, String.valueOf(item.album.tracks.items.size())));
             } else {
-                homeViewHolder.mTracksCount.setText("tracks : " + 0);
+                homeViewHolder.mTracksCount.setText(mContext.getResources().getString(R.string.tracks, String.valueOf(0)));
             }
 
-            homeViewHolder.mReleaseDate.setText("Release Date - " + item.album.release_date);
+            homeViewHolder.mReleaseDate.setText(mContext.getResources().getString(R.string.release_date, item.album.release_date));
 
             //Using picasso here
             if (StringUtil.isNullOrEmpty(item.album.images.get(0).url)) {
@@ -105,7 +106,7 @@ public class DrawerItemCustomAdapter extends RecyclerView.Adapter<RecyclerView.V
                     Picasso.with(homeViewHolder.mAlbumIcon.getContext())
                             .load(item.album.images.get(0).url)
                             .placeholder(mContext.getDrawable(R.drawable.ic_launcher_background))
-                            .error(mContext.getDrawable(R.drawable.ic_launcher_background))
+                            .error(Objects.requireNonNull(mContext.getDrawable(R.drawable.ic_launcher_background)))
                             .resize(
                                     90, 90
                             )
